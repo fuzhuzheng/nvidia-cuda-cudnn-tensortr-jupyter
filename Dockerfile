@@ -290,7 +290,7 @@ LABEL maintainer="fuzhuzheng <fuzhuzheng@163.com>"
 USER root
 
 RUN wget 'https://nvidia-cuda-cudnn-tensortr-jupyter.oss-cn-hongkong.aliyuncs.com/nv-tensorrt-repo-ubuntu1804-cuda10.1-trt6.0.1.5-ga-20190913_1-1_amd64.deb?Expires=1605929720&OSSAccessKeyId=TMP.3KiAEhZAM8BZX2a3poM4GNEYUnG5H9fkewb4YXBWLnvusNtazyHXv7xFwQNm76nkDwX4Z7ThfgGKFsqWP1Qhtw4StX1936&Signature=KLrQvlbpKvvz7QOTWuY%2FrxqCIr8%3D' -O nv-tensorrt-repo-ubuntu1804-cuda10.1-trt6.0.1.5-ga-20190913_1-1_amd64.deb && \
-    dpkg -i dpkg -i nv-tensorrt-repo-ubuntu1x04-cudax.x-trt6.x.x.x-ga-yyyymmdd_1-1_amd64.deb && \
+    dpkg -i nv-tensorrt-repo-ubuntu1x04-cudax.x-trt6.x.x.x-ga-yyyymmdd_1-1_amd64.deb && \
     apt-key add /var/nv-tensorrt-repo-cuda10.1-trt6.0.1.5-ga-20190913/7fa2af80.pub && \
     apt-get update && \
     apt-get install -y --no-install-recommends tensorrt python3-libnvinfer-dev uff-converter-tf && \
