@@ -310,8 +310,8 @@ RUN wget 'https://nvidia-cuda-cudnn-tensortr-jupyter.oss-cn-hongkong.aliyuncs.co
     python-libnvinfer-dev=6.0.1-1+cuda10.1 \
     python3-libnvinfer=6.0.1-1+cuda10.1 \
     python3-libnvinfer-dev=6.0.1-1+cuda10.1 \
-    tensorrt=6.0.1.5-1+cuda10.1  \
-    uff-converter-tf=6.0.1-1+cuda10.1 \
+    tensorrt=6.0.1.5-1+cuda10.1 \
+    uff-converter-tf=6.0.1-1+cuda10.1 && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     rm -fr ./nv-tensorrt-repo-ubuntu1x04-cudax.x-trt6.x.x.x-ga-yyyymmdd_1-1_amd64.deb
