@@ -280,3 +280,21 @@ USER $NB_UID
 WORKDIR $HOME
 
 
+
+########################################################################################################################
+
+
+
+LABEL maintainer="fuzhuzheng <fuzhuzheng@163.com>"
+
+USER root
+
+RUN wget 'https://developer.download.nvidia.cn/compute/machin' -O nv-tensorrt-repo-ubuntu1804-cuda10.1-trt6.0.1.5-ga-20190913_1-1_amd64.deb && \
+    dpkg -i dpkg -i nv-tensorrt-repo-ubuntu1x04-cudax.x-trt6.x.x.x-ga-yyyymmdd_1-1_amd64.deb && \
+    apt-key add /var/nv-tensorrt-repo-cuda10.1-trt6.0.1.5-ga-20190913/7fa2af80.pub && \
+    apt-get update && \
+    apt-get install -y --no-install-recommends tensorrt python3-libnvinfer-dev uff-converter-tf && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
+
+USER $NB_UID
