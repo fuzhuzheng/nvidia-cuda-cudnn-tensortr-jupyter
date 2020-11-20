@@ -314,7 +314,7 @@ RUN wget 'https://nvidia-cuda-cudnn-tensortr-jupyter.oss-cn-hongkong.aliyuncs.co
     uff-converter-tf=6.0.1-1+cuda10.1 && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
-    rm -fr ./nv-tensorrt-repo-ubuntu1x04-cudax.x-trt6.x.x.x-ga-yyyymmdd_1-1_amd64.deb
+    rm -fr ./nv-tensorrt-repo-ubuntu1804-cuda10.1-trt6.0.1.5-ga-20190913_1-1_amd64.deb
 
 
 USER $NB_UID
