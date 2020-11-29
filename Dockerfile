@@ -289,7 +289,7 @@ LABEL maintainer="fuzhuzheng <fuzhuzheng@163.com>"
 
 USER root
 
-RUN wget 'https://nvidia-cuda-cudnn-tensortr-jupyter.oss-cn-hongkong.aliyuncs.com/nv-tensorrt-repo-ubuntu1804-cuda10.0-trt6.0.1.5-ga-20190913_1-1_amd64.deb?Expires=1606701283&OSSAccessKeyId=TMP.3KhFLmson7Ysv92PDwdiasLD62psF9C7JUWMsWZ8w2fkf9gq2r2KV4ENY6DsA3w6CtQ4hd9vvJbA5UTpGJCpyAZi6CoKZg&Signature=JX9TUYfgf4OQGP8kQMFoCpZ3WEY%3D' -O nv-tensorrt-repo-ubuntu1804-cuda10.1-trt6.0.1.5-ga-20190913_1-1_amd64.deb && \
+RUN wget 'https://nvidia-cuda-cudnn-tensortr-jupyter.oss-cn-hongkong.aliyuncs.com/nv-tensorrt-repo-ubuntu1804-cuda10.0-trt6.0.1.5-ga-20190913_1-1_amd64.deb?Expires=1606701283&OSSAccessKeyId=TMP.3KhFLmson7Ysv92PDwdiasLD62psF9C7JUWMsWZ8w2fkf9gq2r2KV4ENY6DsA3w6CtQ4hd9vvJbA5UTpGJCpyAZi6CoKZg&Signature=JX9TUYfgf4OQGP8kQMFoCpZ3WEY%3D' -O nv-tensorrt-repo-ubuntu1804-cuda10.0-trt6.0.1.5-ga-20190913_1-1_amd64.deb && \
     dpkg -i nv-tensorrt-repo-ubuntu1804-cuda10.0-trt6.0.1.5-ga-20190913_1-1_amd64.deb && \
     apt-key add /var/nv-tensorrt-repo-cuda10.0-trt6.0.1.5-ga-20190913/7fa2af80.pub && \
     apt-get update && \
@@ -314,7 +314,7 @@ RUN wget 'https://nvidia-cuda-cudnn-tensortr-jupyter.oss-cn-hongkong.aliyuncs.co
     uff-converter-tf=6.0.1-1+cuda10.0 && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
-    rm -fr ./nv-tensorrt-repo-ubuntu1804-cuda10.1-trt6.0.1.5-ga-20190913_1-1_amd64.deb
+    rm -fr ./nv-tensorrt-repo-ubuntu1804-cuda10.0-trt6.0.1.5-ga-20190913_1-1_amd64.deb
 
 
 USER $NB_UID
