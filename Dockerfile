@@ -294,24 +294,24 @@ RUN wget 'https://nvidia-cuda-cudnn-tensortr-jupyter.oss-cn-hongkong.aliyuncs.co
     apt-key add /var/nv-tensorrt-repo-cuda10.1-trt6.0.1.5-ga-20190913/7fa2af80.pub && \
     apt-get update && \
     apt-get install -y --no-install-recommends \
-    graphsurgeon-tf=6.0.1-1+cuda10.1 \
-    libnvinfer-bin=6.0.1-1+cuda10.1 \
-    libnvinfer-dev=6.0.1-1+cuda10.1 \
-    libnvinfer-doc=6.0.1-1+cuda10.1 \
-    libnvinfer-plugin-dev=6.0.1-1+cuda10.1 \
-    libnvinfer-plugin6=6.0.1-1+cuda10.1 \
-    libnvinfer-samples=6.0.1-1+cuda10.1 \
-    libnvinfer6=6.0.1-1+cuda10.1 \
-    libnvonnxparsers-dev=6.0.1-1+cuda10.1 \
-    libnvonnxparsers6=6.0.1-1+cuda10.1 \
-    libnvparsers-dev=6.0.1-1+cuda10.1 \
-    libnvparsers6=6.0.1-1+cuda10.1 \
-    python-libnvinfer=6.0.1-1+cuda10.1 \
-    python-libnvinfer-dev=6.0.1-1+cuda10.1 \
-    python3-libnvinfer=6.0.1-1+cuda10.1 \
-    python3-libnvinfer-dev=6.0.1-1+cuda10.1 \
-    tensorrt=6.0.1.5-1+cuda10.1 \
-    uff-converter-tf=6.0.1-1+cuda10.1 && \
+    graphsurgeon-tf=6.0.1-1+cuda10.0 \
+    libnvinfer-bin=6.0.1-1+cuda10.0 \
+    libnvinfer-dev=6.0.1-1+cuda10.0 \
+    libnvinfer-doc=6.0.1-1+cuda10.0 \
+    libnvinfer-plugin-dev=6.0.1-1+cuda10.0 \
+    libnvinfer-plugin6=6.0.1-1+cuda10.0 \
+    libnvinfer-samples=6.0.1-1+cuda10.0 \
+    libnvinfer6=6.0.1-1+cuda10.0 \
+    libnvonnxparsers-dev=6.0.1-1+cuda10.0 \
+    libnvonnxparsers6=6.0.1-1+cuda10.0 \
+    libnvparsers-dev=6.0.1-1+cuda10.0 \
+    libnvparsers6=6.0.1-1+cuda10.0 \
+    python-libnvinfer=6.0.1-1+cuda10.0 \
+    python-libnvinfer-dev=6.0.1-1+cuda10.0 \
+    python3-libnvinfer=6.0.1-1+cuda10.0 \
+    python3-libnvinfer-dev=6.0.1-1+cuda10.0 \
+    tensorrt=6.0.1.5-1+cuda10.0 \
+    uff-converter-tf=6.0.1-1+cuda10.0 && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     rm -fr ./nv-tensorrt-repo-ubuntu1804-cuda10.1-trt6.0.1.5-ga-20190913_1-1_amd64.deb
