@@ -299,13 +299,13 @@ RUN wget 'https://nvidia-cuda-cudnn-tensortr-jupyter.oss-cn-hongkong.aliyuncs.co
     libnvinfer-dev=7.2.1-1+cuda10.2 \
     libnvinfer-doc=7.2.1-1+cuda10.2 \
     libnvinfer-plugin-dev=7.2.1-1+cuda10.2 \
-    libnvinfer-plugin6=7.2.1-1+cuda10.2 \
+    libnvinfer-plugin7=7.2.1-1+cuda10.2 \
     libnvinfer-samples=7.2.1-1+cuda10.2 \
-    libnvinfer6=7.2.1-1+cuda10.2 \
+    libnvinfer7=7.2.1-1+cuda10.2 \
     libnvonnxparsers-dev=7.2.1-1+cuda10.2 \
-    libnvonnxparsers6=7.2.1-1+cuda10.2 \
+    libnvonnxparsers7=7.2.1-1+cuda10.2 \
     libnvparsers-dev=7.2.1-1+cuda10.2 \
-    libnvparsers6=7.2.1-1+cuda10.2 \
+    libnvparsers7=7.2.1-1+cuda10.2 \
     python-libnvinfer=7.2.1-1+cuda10.2 \
     python-libnvinfer-dev=7.2.1-1+cuda10.2 \
     python3-libnvinfer=7.2.1-1+cuda10.2 \
