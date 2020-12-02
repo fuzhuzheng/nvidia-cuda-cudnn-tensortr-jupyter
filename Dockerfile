@@ -4,13 +4,13 @@
 # Ubuntu 20.04 (focal)
 # https://hub.docker.com/_/ubuntu/?tab=tags&name=focal
 # OS/ARCH: linux/amd64
-ARG ROOT_CONTAINER=nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04
+ARG ROOT_CONTAINER=nvidia/cuda:10.2-cudnn7-devel-ubuntu18.04
 
 ARG BASE_CONTAINER=$ROOT_CONTAINER
 FROM $BASE_CONTAINER
 
 LABEL maintainer="Jupyter Project <jupyter@googlegroups.com>"
-ARG NB_USER="jovyan"
+ARG NB_USER="fuzhuzheng"
 ARG NB_UID="1000"
 ARG NB_GID="100"
 
@@ -289,32 +289,32 @@ LABEL maintainer="fuzhuzheng <fuzhuzheng@163.com>"
 
 USER root
 
-RUN wget 'https://nvidia-cuda-cudnn-tensortr-jupyter.oss-cn-hongkong.aliyuncs.com/nv-tensorrt-repo-ubuntu1804-cuda10.0-trt6.0.1.5-ga-20190913_1-1_amd64.deb?Expires=1606701283&OSSAccessKeyId=TMP.3KhFLmson7Ysv92PDwdiasLD62psF9C7JUWMsWZ8w2fkf9gq2r2KV4ENY6DsA3w6CtQ4hd9vvJbA5UTpGJCpyAZi6CoKZg&Signature=JX9TUYfgf4OQGP8kQMFoCpZ3WEY%3D' -O nv-tensorrt-repo-ubuntu1804-cuda10.0-trt6.0.1.5-ga-20190913_1-1_amd64.deb && \
-    dpkg -i nv-tensorrt-repo-ubuntu1804-cuda10.0-trt6.0.1.5-ga-20190913_1-1_amd64.deb && \
-    apt-key add /var/nv-tensorrt-repo-cuda10.0-trt6.0.1.5-ga-20190913/7fa2af80.pub && \
+RUN wget 'https://nvidia-cuda-cudnn-tensortr-jupyter.oss-cn-hongkong.aliyuncs.com/nv-tensorrt-repo-ubuntu1804-cuda10.2-trt7.2.1.6-ga-20201006_1-1_amd64.deb?Expires=1606932105&OSSAccessKeyId=TMP.3Kg43SoAHNv5CuQnAirTQCGsWLnwoN6TsvcHLB7RanYyeP5KY8r4Wd6WzckXAQJHbcsmkB33nU3wemcMpiSyCRaK6626wt&Signature=LqwuUIgLeuJsm1ID%2F69PQWBcfEA%3D' -O nv-tensorrt-repo-ubuntu1804-cuda10.2-trt7.2.1.6-ga-20201006_1-1_amd64.deb && \
+    dpkg -i nv-tensorrt-repo-ubuntu1804-cuda10.2-trt7.2.1.6-ga-20201006_1-1_amd64.deb && \
+    apt-key add /var/nv-tensorrt-repo-cuda10.2-trt7.2.1.6-ga-20201006/7fa2af80.pub && \
     apt-get update && \
     apt-get install -y --no-install-recommends \
-    graphsurgeon-tf=6.0.1-1+cuda10.0 \
-    libnvinfer-bin=6.0.1-1+cuda10.0 \
-    libnvinfer-dev=6.0.1-1+cuda10.0 \
-    libnvinfer-doc=6.0.1-1+cuda10.0 \
-    libnvinfer-plugin-dev=6.0.1-1+cuda10.0 \
-    libnvinfer-plugin6=6.0.1-1+cuda10.0 \
-    libnvinfer-samples=6.0.1-1+cuda10.0 \
-    libnvinfer6=6.0.1-1+cuda10.0 \
-    libnvonnxparsers-dev=6.0.1-1+cuda10.0 \
-    libnvonnxparsers6=6.0.1-1+cuda10.0 \
-    libnvparsers-dev=6.0.1-1+cuda10.0 \
-    libnvparsers6=6.0.1-1+cuda10.0 \
-    python-libnvinfer=6.0.1-1+cuda10.0 \
-    python-libnvinfer-dev=6.0.1-1+cuda10.0 \
-    python3-libnvinfer=6.0.1-1+cuda10.0 \
-    python3-libnvinfer-dev=6.0.1-1+cuda10.0 \
-    tensorrt=6.0.1.5-1+cuda10.0 \
-    uff-converter-tf=6.0.1-1+cuda10.0 && \
+    graphsurgeon-tf=7.2.1-1+cuda10.2 \
+    libnvinfer-bin=7.2.1-1+cuda10.2 \
+    libnvinfer-dev=7.2.1-1+cuda10.2 \
+    libnvinfer-doc=7.2.1-1+cuda10.2 \
+    libnvinfer-plugin-dev=7.2.1-1+cuda10.2 \
+    libnvinfer-plugin6=7.2.1-1+cuda10.2 \
+    libnvinfer-samples=7.2.1-1+cuda10.2 \
+    libnvinfer6=7.2.1-1+cuda10.2 \
+    libnvonnxparsers-dev=7.2.1-1+cuda10.2 \
+    libnvonnxparsers6=7.2.1-1+cuda10.2 \
+    libnvparsers-dev=7.2.1-1+cuda10.2 \
+    libnvparsers6=7.2.1-1+cuda10.2 \
+    python-libnvinfer=7.2.1-1+cuda10.2 \
+    python-libnvinfer-dev=7.2.1-1+cuda10.2 \
+    python3-libnvinfer=7.2.1-1+cuda10.2 \
+    python3-libnvinfer-dev=7.2.1-1+cuda10.2 \
+    tensorrt=7.2.1.6-1+cuda10.2 \
+    uff-converter-tf=7.2.1-1+cuda10.2 && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
-    rm -fr ./nv-tensorrt-repo-ubuntu1804-cuda10.0-trt6.0.1.5-ga-20190913_1-1_amd64.deb
+    rm -fr ./nv-tensorrt-repo-ubuntu1804-cuda10.2-trt7.2.1.6-ga-20201006_1-1_amd64.deb
 
 
 USER $NB_UID
